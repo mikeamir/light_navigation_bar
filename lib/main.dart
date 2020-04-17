@@ -18,10 +18,9 @@ void main() {
             ],
             onSelected: print,
             screenSizeWidthPercentage: 80,
-            screenSizeHeightPercentages: 10,
+            screenSizeHeightPercentage: 10,
             radius: 25,
             lightOn: true,
-            duration: Duration(seconds: 2),
           ),
         ),
       ),
@@ -35,7 +34,7 @@ class NavigationBar extends StatefulWidget {
   final List<IconData> icons;
   final double radius;
   final Function(int index) onSelected;
-  final int screenSizeWidthPercentage, screenSizeHeightPercentages;
+  final int screenSizeWidthPercentage, screenSizeHeightPercentage;
   final Duration duration;
   final bool lightOn;
   int index;
@@ -49,7 +48,7 @@ class NavigationBar extends StatefulWidget {
     this.radius = 0,
     this.index = 0,
     this.screenSizeWidthPercentage = 100,
-    this.screenSizeHeightPercentages = 100,
+    this.screenSizeHeightPercentage = 100,
     this.duration = const Duration(milliseconds: 100),
     this.lightOn = true,
   });
@@ -66,7 +65,7 @@ class _NavigationBarState extends State<NavigationBar> {
   @override
   Widget build(BuildContext context) {
     return FractionallySizedBox(
-      heightFactor: widget.screenSizeHeightPercentages / 100,
+      heightFactor: widget.screenSizeHeightPercentage / 100,
       widthFactor: widget.screenSizeWidthPercentage / 100,
       alignment: Alignment.center,
       child: Container(
